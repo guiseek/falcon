@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "public": "tsc && vite build --base=falcon",
     "preview": "vite preview"
   },
   "devDependencies": {
