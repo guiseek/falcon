@@ -42,7 +42,7 @@ export class F16Falcon extends loader("models/f16-falcon.glb") {
         this.#actions.push(this.#mixer.clipAction(animation));
       }
 
-      // this.#activateActions(0.3)
+      this.#activateActions(0.3)
     };
   }
 
