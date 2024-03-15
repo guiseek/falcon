@@ -71,7 +71,7 @@ export class Control {
     onkeydown = this.#onKeyDownEvent;
     onkeyup = this.#onKeyUpEvent;
 
-    if (isMobile() && DeviceOrientationEvent) {
+    if (isMobile()) {
       ondeviceorientation = (event) => {
         const [w, x, y, z] = quaternionFromOrientation(event);
         const rotation = this.deviceRotation.set(x, y, z, w);
