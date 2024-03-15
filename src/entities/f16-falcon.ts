@@ -15,9 +15,6 @@ export class F16Falcon extends loader("models/f16-falcon.glb") {
   #acceleration = 0.6;
 
   #rotation = new Quaternion();
-  get quat() {
-    return this.#rotation;
-  }
 
   #yawVelocity = 0;
   #pitchVelocity = 0;
@@ -43,6 +40,10 @@ export class F16Falcon extends loader("models/f16-falcon.glb") {
       }
 
       this.#activateActions(0.3)
+
+      this.control.onRotation = (deviceRotation) => {
+        this.#rotation.copy(deviceRotation)
+      }
     };
   }
 
